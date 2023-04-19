@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://6dqblb7ygbir"]
+
+[ext_resource type="Script" path="res://ItemResource.cs" id="1_uvpnj"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5ykgf"]
+load_path = "res://.godot/imported/colored_transparent_packed.png-6f8683d7b11502217cd25f65654517c9.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjrnv"]
+atlas = SubResource("CompressedTexture2D_5ykgf")
+region = Rect2(704, 32, 16, 16)
+
+[resource]
+script = ExtResource("1_uvpnj")
+Name = "Crown"
+Description = "a golden crown"
+Stackable = false
+Sprite = SubResource("AtlasTexture_hjrnv")
+Width = 3
+Height = 3

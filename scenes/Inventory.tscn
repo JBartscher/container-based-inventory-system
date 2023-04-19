@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvkktqsx2n8w6"]
+
+[ext_resource type="PackedScene" uid="uid://c14kw7imnig6p" path="res://scenes/container/container.tscn" id="1_q45sr"]
+[ext_resource type="PackedScene" uid="uid://b77mlhrrsd3i2" path="res://scenes/items/item.tscn" id="2_jn8d8"]
+[ext_resource type="Resource" uid="uid://6dqblb7ygbir" path="res://scenes/items/item_resources/crown.tres" id="3_e7myj"]
+[ext_resource type="Resource" uid="uid://c0vtdv46fg525" path="res://scenes/items/item_resources/apple.tres" id="4_krp3t"]
+[ext_resource type="Resource" uid="uid://b51s6x1wekoag" path="res://scenes/items/item_resources/sword.tres" id="5_kq3my"]
+
+[node name="Inventory" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" parent="MarginContainer" instance=ExtResource("1_q45sr")]
+visible = false
+position = Vector2(273, 277)
+CellWidth = 2
+CellHeight = 4
+
+[node name="Container2" parent="MarginContainer" instance=ExtResource("1_q45sr")]
+visible = false
+position = Vector2(386, 168)
+CellWidth = 6
+CellHeight = 6
+
+[node name="item" parent="MarginContainer" instance=ExtResource("2_jn8d8")]
+position = Vector2(228, 170)
+ItemResource = ExtResource("4_krp3t")
+
+[node name="item2" parent="MarginContainer" instance=ExtResource("2_jn8d8")]
+position = Vector2(509, 259)
+ItemResource = ExtResource("3_e7myj")
+
+[node name="item3" parent="MarginContainer" instance=ExtResource("2_jn8d8")]
+position = Vector2(708, 118)
+ItemResource = ExtResource("5_kq3my")

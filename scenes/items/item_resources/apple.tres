@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://c0vtdv46fg525"]
+
+[ext_resource type="Script" path="res://ItemResource.cs" id="1_q8eqm"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_la80t"]
+load_path = "res://.godot/imported/colored_transparent_packed.png-6f8683d7b11502217cd25f65654517c9.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydcp3"]
+atlas = SubResource("CompressedTexture2D_la80t")
+region = Rect2(528, 288, 16, 16)
+
+[resource]
+script = ExtResource("1_q8eqm")
+Name = "Apple"
+Description = "An red Apple"
+Stackable = true
+Sprite = SubResource("AtlasTexture_ydcp3")
+Width = 1
+Height = 1

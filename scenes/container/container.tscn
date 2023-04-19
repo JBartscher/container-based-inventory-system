@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=3 uid="uid://c14kw7imnig6p"]
+
+[ext_resource type="Script" path="res://scenes/container/Container.cs" id="1_02eud"]
+[ext_resource type="PackedScene" uid="uid://dlb8b7vrvd6y8" path="res://scenes/item_slot/item_slot.tscn" id="2_ss7vc"]
+[ext_resource type="Texture2D" uid="uid://bvnt7c0ktonll" path="res://scenes/container/Container_background.png" id="3_cn5q5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vcpjh"]
+resource_name = "backround"
+texture = ExtResource("3_cn5q5")
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/left_side = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/left_side = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/top_side = 0
+0:1/0/terrains_peering_bit/top_right_corner = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/terrains_peering_bit/top_left_corner = 0
+1:1/0/terrains_peering_bit/top_side = 0
+1:1/0/terrains_peering_bit/top_right_corner = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/terrains_peering_bit/top_left_corner = 0
+2:1/0/terrains_peering_bit/top_side = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/terrains_peering_bit/right_side = 0
+0:2/0/terrains_peering_bit/top_side = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/left_side = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_side = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+
+[sub_resource type="TileSet" id="TileSet_xw2pv"]
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/color = Color(0.647059, 0.0745098, 0.545098, 1)
+sources/0 = SubResource("TileSetAtlasSource_vcpjh")
+
+[node name="Container" type="Node2D"]
+script = ExtResource("1_02eud")
+SlotScene = ExtResource("2_ss7vc")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_xw2pv")
+format = 2

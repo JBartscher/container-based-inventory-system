@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://b77mlhrrsd3i2"]
+
+[ext_resource type="Script" path="res://scenes/items/Item.cs" id="1_caqry"]
+[ext_resource type="Texture2D" uid="uid://ba5vherw3gid1" path="res://tile_0060.png" id="2_on77i"]
+
+[node name="item" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_caqry")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 5
+texture = ExtResource("2_on77i")
+centered = false
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 8)
+debug_color = Color(0.662745, 0.505882, 0.188235, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 1
+color = Color(0.207843, 0.0313726, 0.231373, 1)
+
+[node name="CenterOfBaseSlot" type="Marker2D" parent="."]
+position = Vector2(8, 8)
